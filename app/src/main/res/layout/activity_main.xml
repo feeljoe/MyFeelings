@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="250dp"
+            android:layout_width="250dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/graph">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="¿Cómo te sientes el día de hoy?"
+        tools:layout_editor_absoluteY="330dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/options"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/verySadButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_verysad"
+                android:background="@android:color/transparent"
+                android:layout_marginHorizontal="10dp"/>
+
+            <ImageButton
+                android:id="@+id/sadButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_sad"
+                android:background="@android:color/transparent"
+                android:layout_marginHorizontal="10dp"/>
+
+            <ImageButton
+                android:id="@+id/neutralButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_neutral"
+                android:background="@android:color/transparent"
+                android:layout_marginHorizontal="10dp"/>
+
+            <ImageButton
+                android:id="@+id/happyButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:srcCompat="@drawable/ic_happy"
+                android:background="@android:color/transparent"
+                android:layout_marginHorizontal="10dp"/>
+
+
+            <ImageButton
+                android:id="@+id/veryHappyButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/ic_veryhappy"
+                android:layout_marginHorizontal="10dp"/>
+        </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/white"
+        android:text="Guardar"
+        android:id="@+id/guardarButton"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"></Button>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/bargraphs"
+        android:columnCount="2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Muy Feliz"
+            android:layout_marginRight="15dp"/>
+
+        <View android:layout_height="20dp"
+            android:layout_width="250dp"
+            android:id="@+id/graphVeryHappy"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Feliz"
+            android:layout_marginRight="15dp"/>
+
+        <View android:layout_height="20dp"
+            android:layout_width="250dp"
+            android:id="@+id/graphHappy"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Neutral"
+            android:layout_marginRight="15dp"/>
+
+        <View android:layout_height="20dp"
+            android:layout_width="250dp"
+            android:id="@+id/graphNeutral"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Triste"
+            android:layout_marginRight="15dp"/>
+
+        <View android:layout_height="20dp"
+            android:layout_width="250dp"
+            android:id="@+id/graphSad"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="Muy Triste"
+            android:layout_marginRight="15dp"/>
+
+        <View android:layout_height="20dp"
+            android:layout_width="250dp"
+            android:id="@+id/graphVerySad"/>
+    </GridLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
